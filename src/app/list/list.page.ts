@@ -24,7 +24,7 @@ export class ListPage implements OnInit {
         'build'
     ];*/
   categorie = Categories[0];
-  produit = Produits[0];
+  produit = Produits;
   //public items: Array<{ title: string; note: string; icon: string }> = [];
 
   constructor(private categorieService: CategoriesService, private produitService: ProduitsService) {
@@ -40,7 +40,7 @@ export class ListPage implements OnInit {
 
   ngOnInit() {
     this.getCategories();
-    this.getProduits();
+    //this.getProduits();
   }
 
   getCategories(): void{
@@ -52,13 +52,12 @@ export class ListPage implements OnInit {
       );
   }
 
-    getProduits(): void{
-        this.produitService.getProduits().subscribe(
-            (data) => {
-                this.produit = data;
-                console.log(this.produit);
-            }
-        );
+  getProduits(): void{
+      this.produitService.getProduits().subscribe(
+          (data) => {
+              this.produit = data;
+              console.log(this.produit);
+          });
     }
   // add back when alpha.4 is out
   // navigate(item) {

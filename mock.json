@@ -1,0 +1,16 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "categorie": "bas de noel"
+    },
+    {
+      "id": 2,
+      "categorie": "bas de paques"
+    },
+    {
+      "id": 3,
+      "categorie": "bas de cabane a sucre"
+    }
+  ]
+}
