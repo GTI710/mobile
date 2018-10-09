@@ -4,19 +4,19 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Catégories
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
+    <ion-item *ngFor="let categories of categories">
+      <!--<ion-icon [name]="item.icon" slot="start"></ion-icon>-->
+      {{categories.categorie}}
+      <!--<div class="item-note" slot="end">
         {{item.note}}
-      </div>
+      </div>-->
     </ion-item>
   </ion-list>
   <!--
