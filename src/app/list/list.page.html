@@ -9,19 +9,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let categories of categorie">
+<ion-card-header>
+  Acheter vos bas ici!
+</ion-card-header>
+<ion-card>
+  <ion-list *ngFor="let categories of categorie">
+    <ion-icon name="cart" item-start></ion-icon>
+    <button ion-item >
       <!--<ion-icon [name]="item.icon" slot="start"></ion-icon>-->
       {{categories.categorie}}
       <!--<div class="item-note" slot="end">
         {{item.note}}
       </div>-->
-    </ion-item>
+    </button>
   </ion-list>
   <!--
     <div *ngIf="selectedItem" padding>
       You navigated here from <b>{{selectedItem.title }}</b>
     </div>
   -->
-</ion-content>
+</ion-card>
