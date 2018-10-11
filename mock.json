@@ -2,15 +2,18 @@
   "categories": [
     {
       "id": 1,
-      "categorie": "bas de noel"
+      "categorie": "bas de noel",
+      "image": "img/card-xmas.jpg"
     },
     {
       "id": 2,
-      "categorie": "bas de paques"
+      "categorie": "bas uniforme",
+      "image": "img/card-uniform.jpg"
     },
     {
       "id": 3,
-      "categorie": "bas de cabane a sucre"
+      "categorie": "bas de cabane a sucre",
+      "image": "img/card-cabane-a-sucre2.jpg"
     }
   ]
 }

@@ -12,29 +12,8 @@
 <ion-content class="card-background-page">
   Choisisez le type de bas que vous voulez acheter.
   <ion-card *ngFor="let categories of categorie">
-    <img src="img/card-saopaolo.png"/>
+    <img src="{{categories.image}}"/>
     <div class="card-title">{{categories.categorie}}</div>
-  </ion-card>
-  <!-- shit data -->
-  <ion-card>
-    <img src="img/card-cabane-a-sucre2.jpg"/>
-    <div class="card-title">Bas de Cabane à sucre</div>
-  </ion-card>
-  <ion-card>
-    <img src="img/card-xmas.jpg"/>
-    <div class="card-title">Bas de Noel</div>
-  </ion-card>
-  <ion-card>
-    <img src="img/card-halloween.jpg"/>
-    <div class="card-title">Bas d'halloween</div>
-  </ion-card>
-  <ion-card>
-    <img src="img/card-uniform.jpg"/>
-    <div class="card-title">Bas de couleur uniforme</div>
-  </ion-card>
-  <ion-card>
-    <img src="img/card-valentin.jpg"/>
-    <div class="card-title">Bas de la Saint-Valentin</div>
   </ion-card>
   <!--<ion-list *ngFor="let categories of categorie">
     <button ion-item >
