@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Categories } from "../models/categories";
-import { CategoriesService } from "../services/categories.service";
-import {ProduitsService} from "../services/produits.service";
-import {Produits} from "../models/produits";
+import { Categories } from "../../models/categories";
+import { CategoriesService } from "../../services/categories.service";
+import {ProduitsService} from "../../services/produits.service";
+import {Produits} from "../../models/produits";
 
 @Component({
   selector: 'app-list',

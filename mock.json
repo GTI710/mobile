@@ -3,17 +3,20 @@
     {
       "id": 1,
       "categorie": "bas de noel",
-      "image": "img/card-xmas.jpg"
+      "image": "img/card-xmas.jpg",
+      "path": "basDeNoel"
     },
     {
       "id": 2,
       "categorie": "bas uniforme",
-      "image": "img/card-uniform.jpg"
+      "image": "img/card-uniform.jpg",
+      "path": "basUniforme"
     },
     {
       "id": 3,
       "categorie": "bas de cabane a sucre",
-      "image": "img/card-cabane-a-sucre2.jpg"
+      "image": "img/card-cabane-a-sucre2.jpg",
+      "path": "basCabaneASucre"
     }
   ]
 }
