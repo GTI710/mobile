@@ -14,7 +14,10 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'panier',
+    loadChildren: './panier/panier.module#PanierPageModule' }
+
 ];
 
 @NgModule({

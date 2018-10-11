@@ -9,23 +9,42 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-card-header>
-  Acheter vos bas ici!
-</ion-card-header>
-<ion-card>
-  <ion-list *ngFor="let categories of categorie">
-    <ion-icon name="cart" item-start></ion-icon>
+<ion-content class="card-background-page">
+  Choisisez le type de bas que vous voulez acheter.
+  <ion-card *ngFor="let categories of categorie">
+    <img src="img/card-saopaolo.png"/>
+    <div class="card-title">{{categories.categorie}}</div>
+  </ion-card>
+  <!-- shit data -->
+  <ion-card>
+    <img src="img/card-cabane-a-sucre2.jpg"/>
+    <div class="card-title">Bas de Cabane à sucre</div>
+  </ion-card>
+  <ion-card>
+    <img src="img/card-xmas.jpg"/>
+    <div class="card-title">Bas de Noel</div>
+  </ion-card>
+  <ion-card>
+    <img src="img/card-halloween.jpg"/>
+    <div class="card-title">Bas d'halloween</div>
+  </ion-card>
+  <ion-card>
+    <img src="img/card-uniform.jpg"/>
+    <div class="card-title">Bas de couleur uniforme</div>
+  </ion-card>
+  <ion-card>
+    <img src="img/card-valentin.jpg"/>
+    <div class="card-title">Bas de la Saint-Valentin</div>
+  </ion-card>
+  <!--<ion-list *ngFor="let categories of categorie">
     <button ion-item >
-      <!--<ion-icon [name]="item.icon" slot="start"></ion-icon>-->
       {{categories.categorie}}
-      <!--<div class="item-note" slot="end">
-        {{item.note}}
-      </div>-->
     </button>
-  </ion-list>
+  </ion-list>-->
+</ion-content>
+
   <!--
     <div *ngIf="selectedItem" padding>
       You navigated here from <b>{{selectedItem.title }}</b>
     </div>
   -->
-</ion-card>
