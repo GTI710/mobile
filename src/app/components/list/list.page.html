@@ -11,7 +11,7 @@
 
 <ion-content class="card-background-page">
   Choisisez le type de bas que vous voulez acheter.
-  <ion-card *ngFor="let categories of categorie">
+  <ion-card *ngFor="let categories of categorie" (click)="go(categories)">
     <img src="{{categories.image}}"/>
     <div class="card-title">{{categories.categorie}}</div>
   </ion-card>
