@@ -9,6 +9,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content class="card-background-page">
+  Choisisez le produit que vous voulez acheter.
+  <ion-card *ngFor="let produits of produit">
+    <div class="card-title">{{produits.couleur}}</div>
+  </ion-card>
+  <!--<ion-list *ngFor="let categories of categorie">
+    <button ion-item >
+      {{categories.categorie}}
+    </button>
+  </ion-list>-->
 </ion-content>

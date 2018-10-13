@@ -18,5 +18,32 @@
       "image": "img/card-cabane-a-sucre2.jpg",
       "path": "basCabaneASucre"
     }
-  ]
-}
+  ],
+    "basDeNoel": [
+      {
+        "id": "1",
+        "couleur": "blanc",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basDeNoel"
+      },
+      {
+        "id": "2",
+        "couleur": "rouge",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basDeNoel"
+      },
+      {
+        "id": "3",
+        "couleur": "vert",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basDeNoel"
+      }
+    ]
+  }
+

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {ProduitsService} from "../../services/produits.service";
+import {NavController} from '../../../../node_modules/@ionic/angular';
+import {Produits} from "../../models/produits";
+import {Categories} from "../../models/categories";
 
 @Component({
   selector: 'app-bas-de-noel',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasDeNoelPage implements OnInit {
 
-  constructor() { }
+    produit = Produits[0];
+    constructor(private navCtrl: NavController, private produitService: ProduitsService) { }
 
-  ngOnInit() {
-  }
 
+    ngOnInit() {
+        this.getProduits();
+    }
+
+    getProduits(): void{
+      this.produitService.getProduits().subscribe(
+          (data) => {
+              this.produit = data;
+              console.log(this.produit);
+          });
+    }
+    go(categorieClick: Categories): void{
+        console.log(categorieClick);
+        this.navCtrl.navigateForward(categorieClick.path.toString());
+    }
 }
