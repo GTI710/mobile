@@ -7,13 +7,12 @@ import {Produits} from '../models/produits';
   providedIn: 'root'
 })
 export class ProduitsService {
-  baseUrl: "http://localhost:8100";
+  baseUrl: 'http://localhost:3000/basDeNoel';
 
   constructor (private http: HttpClient) { }
 
   getProduits(): Observable<any> {
-    const url = this.baseUrl + '/produits';
-    return this.http.get<Produits>(url);
+    return this.http.get<Produits>('http://localhost:3000/basDeNoel');
   }
 
   getProduitsId(id: number): Observable<any> {

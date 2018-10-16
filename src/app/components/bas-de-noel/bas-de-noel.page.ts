@@ -19,14 +19,14 @@ export class BasDeNoelPage implements OnInit {
         this.getProduits();
     }
 
-    getProduits(): void{
+    getProduits(): void {
       this.produitService.getProduits().subscribe(
           (data) => {
               this.produit = data;
               console.log(this.produit);
           });
     }
-    go(categorieClick: Categories): void{
+    go(categorieClick: Categories): void {
         console.log(categorieClick);
         this.navCtrl.navigateForward(categorieClick.path.toString());
     }

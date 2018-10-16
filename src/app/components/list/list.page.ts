@@ -19,7 +19,7 @@ export class ListPage implements OnInit {
     this.getCategories();
   }
 
-  getCategories(): void{
+  getCategories(): void {
       this.categorieService.getCategories().subscribe(
           (data) => {
               this.categorie = data;
@@ -28,7 +28,7 @@ export class ListPage implements OnInit {
       );
   }
 
-  go(categorieClick: Categories): void{
+  go(categorieClick: Categories): void {
       console.log(categorieClick);
       this.navCtrl.navigateForward(categorieClick.path.toString());
   }
