@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ProduitsService} from "../../services/produits.service";
-import {NavController} from '../../../../node_modules/@ionic/angular';
-import {Produits} from "../../models/produits";
-import {Categories} from "../../models/categories";
+import {ProduitsService} from '../../services/produits.service';
+import {NavController} from '@ionic/angular';
+import {Produits} from '../../models/produits';
+import {Categories} from '../../models/categories';
 
 @Component({
   selector: 'app-bas-de-noel',

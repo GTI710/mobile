@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Categories } from "../../models/categories";
-import { CategoriesService } from "../../services/categories.service";
-import {NavController} from '../../../../node_modules/@ionic/angular';
+import { Categories } from '../../models/categories';
+import { CategoriesService } from '../../services/categories.service';
+import { NavController } from '../../../../node_modules/@ionic/angular';
+import { _ } from 'lodash';
 
 @Component({
   selector: 'app-list',
@@ -11,6 +12,7 @@ import {NavController} from '../../../../node_modules/@ionic/angular';
 export class ListPage implements OnInit {
 
   categorie = Categories[0];
+  category = Object[0];
 
   constructor(private categorieService: CategoriesService, private navCtrl: NavController) {
   }
@@ -22,10 +24,11 @@ export class ListPage implements OnInit {
   getCategories(): void {
       this.categorieService.getCategories().subscribe(
           (data) => {
-              this.categorie = data;
-              console.log(this.categorie);
+              this.category = data;
+              console.log(this.category);
           }
       );
+      //this.categorie = _.values(this.category);
   }
 
   go(categorieClick: Categories): void {

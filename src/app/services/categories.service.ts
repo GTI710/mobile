@@ -9,12 +9,12 @@ import {Produits} from "../models/produits";
 })
 export class CategoriesService {
 
-  baseUrl = "http://localhost:3000";
+  baseUrl = 'http://localhost:8080/api';
 
   constructor(private http: HttpClient) {}
 
   getCategories(): Observable<any> {
-    const url = this.baseUrl + '/categories';
+    const url = this.baseUrl + '/productcategory';
     return this.http.get<Categories>(url);
   }
   getCategoriesId(id: number): Observable<any> {
