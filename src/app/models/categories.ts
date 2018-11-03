@@ -5,3 +5,4 @@ export class Categories {
     image: String;
     path: String;
 }
+

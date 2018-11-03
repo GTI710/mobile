@@ -11,14 +11,14 @@ import { _ } from 'lodash';
 })
 export class ListPage implements OnInit {
 
-  categorie = Categories[0];
-  category = Object[0];
+  category = [];
 
   constructor(private categorieService: CategoriesService, private navCtrl: NavController) {
   }
 
   ngOnInit() {
     this.getCategories();
+
   }
 
   getCategories(): void {
@@ -28,7 +28,6 @@ export class ListPage implements OnInit {
               console.log(this.category);
           }
       );
-      //this.categorie = _.values(this.category);
   }
 
   go(categorieClick: Categories): void {

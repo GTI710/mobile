@@ -7,16 +7,29 @@ import {Produits} from '../models/produits';
   providedIn: 'root'
 })
 export class ProduitsService {
-  baseUrl: 'http://localhost:3000/basDeNoel';
+  //baseUrl: 'http://localhost:3000/basDeNoel';
 
   constructor (private http: HttpClient) { }
 
-  getProduits(): Observable<any> {
-    return this.http.get<Produits>('http://localhost:3000/basDeNoel');
+  getProduitsNoel(): Observable<any> {
+    return this.http.get<Produits>('http://localhost:3000');
   }
-
+  getProduitsUniforme(): Observable<any> {
+      return this.http.get<Produits>('http://localhost:3000');
+  }
+  getProduitsHalloween(): Observable<any> {
+      return this.http.get<Produits>('http://localhost:3000');
+  }
+  getProduitsStValentin(): Observable<any> {
+      return this.http.get<Produits>('http://localhost:3000');
+  }
+  getProduitsCabaneASucre(): Observable<any> {
+      return this.http.get<Produits>('http://localhost:3000');
+  }
+/*
   getProduitsId(id: number): Observable<any> {
     const url = this.baseUrl + `${this.baseUrl}/api/produits/${id}`;
     return this.http.get<Produits>(url);
   }
+  */
 }

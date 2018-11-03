@@ -11,7 +11,7 @@ import {Categories} from '../../models/categories';
 })
 export class BasDeNoelPage implements OnInit {
 
-    produit = Produits[0];
+    produit = [];
     constructor(private navCtrl: NavController, private produitService: ProduitsService) { }
 
 
@@ -20,7 +20,7 @@ export class BasDeNoelPage implements OnInit {
     }
 
     getProduits(): void {
-      this.produitService.getProduits().subscribe(
+      this.produitService.getProduitsNoel().subscribe(
           (data) => {
               this.produit = data;
               console.log(this.produit);
