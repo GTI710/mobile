@@ -2,21 +2,33 @@
   "categories": [
     {
       "id": 1,
-      "categorie": "bas de noel",
+      "name": "bas de noel",
       "image": "img/card-xmas.jpg",
       "path": "/basDeNoel"
     },
     {
       "id": 2,
-      "categorie": "bas uniforme",
+      "name": "bas uniforme",
       "image": "img/card-uniform.jpg",
-      "path": "basUniforme"
+      "path": "/basUniforme"
     },
     {
       "id": 3,
-      "categorie": "bas de cabane a sucre",
+      "name": "bas de cabane a sucre",
       "image": "img/card-cabane-a-sucre2.jpg",
-      "path": "basCabaneASucre"
+      "path": "/basCabaneASucre"
+    },
+    {
+      "id": 4,
+      "name": "bas de Saint-Valentin",
+      "image": "img/card-valentin.jpg",
+      "path": "/basSaintValentin"
+    },
+    {
+      "id": 5,
+      "name": "bas de l'Halloween",
+      "image": "img/card-halloween.jpg",
+      "path": "/basHalloween"
     }
   ],
     "basDeNoel": [
@@ -44,6 +56,111 @@
         "prixCoutant": "15.00",
         "categorie": "basDeNoel"
       }
-    ]
+    ],
+    "basUniforme": [
+    {
+        "id": "1",
+        "couleur": "blanc",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basUniforme"
+    },
+    {
+        "id": "2",
+        "couleur": "rouge",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basUniforme"
+    },
+      {
+         "id": "3",
+        "couleur": "vert",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basUniforme"
+      }
+    ],
+  "basCabaneASucre": [
+    {
+        "id": "1",
+        "couleur": "blanc",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basCabaneASucre"
+    },
+    {
+        "id": "2",
+        "couleur": "rouge",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basCabaneASucre"
+    },
+    {
+        "id": "3",
+        "couleur": "vert",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basCabaneASucre"
+    }
+    ],
+  "basSaintValentin": [
+    {
+        "id": "1",
+        "couleur": "blanc",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basSaintValentin"
+    },
+    {
+        "id": "2",
+        "couleur": "rouge",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basSaintValentin"
+    },
+    {
+        "id": "3",
+        "couleur": "vert",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basSaintValentin"
+    }
+    ],
+  "basHalloween": [
+  {
+        "id": "1",
+        "couleur": "blanc",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basHalloween"
+  },
+  {
+        "id": "2",
+        "couleur": "rouge",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basHalloween"
+  },
+  {
+        "id": "3",
+        "couleur": "vert",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basHalloween"
+  }
+]
+
   }
 
