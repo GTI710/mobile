@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {ProduitsService} from '../../services/produits.service';
 import {NavController} from '@ionic/angular';
 import {Produits} from '../../models/produits';
-import {Categories} from '../../models/categories';
 
 @Component({
   selector: 'app-bas-de-noel',
@@ -11,7 +10,7 @@ import {Categories} from '../../models/categories';
 })
 export class BasDeNoelPage implements OnInit {
 
-    produit = [];
+    product = [];
     constructor(private navCtrl: NavController, private produitService: ProduitsService) { }
 
 
@@ -20,14 +19,12 @@ export class BasDeNoelPage implements OnInit {
     }
 
     getProduits(): void {
-      this.produitService.getProduitsNoel().subscribe(
-          (data) => {
-              this.produit = data;
-              console.log(this.produit);
-          });
+      this.produitService.getProduitsBasDeNoel().subscribe(
+          data => this.product = data['products']);
     }
-    go(categorieClick: Categories): void {
-        console.log(categorieClick);
-        this.navCtrl.navigateForward(categorieClick.path.toString());
+
+    go(): void {
+        this.navCtrl.navigateForward('produit');
     }
+
 }

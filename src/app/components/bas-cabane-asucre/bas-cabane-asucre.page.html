@@ -1,9 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>basCabaneASucre</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Bas de Cabane à sucre
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <ion-list>
+    <ion-item item-start *ngFor="let products of product">
+      <ion-thumbnail >
+        <img src="{products.image}}">
+      </ion-thumbnail>
+      <h2>{{products.name}}</h2>
+      <p>{{products.listPrice}}</p>
+      <button ion-button clear item-end  (click)="getProduits()">Afficher</button>
+    </ion-item>
+  </ion-list>
+  <!--Choisisez le produit que vous voulez acheter.
+  <ion-card *ngFor="letproducts of produit">
+    <div class="card-title">{products.id}}</div>
+  </ion-card>
+  <!--<ion-list *ngFor="let categories of categorie">
+    <button ion-item >
+      {{categories.categorie}}
+    </button>
+  </ion-list>-->
 </ion-content>

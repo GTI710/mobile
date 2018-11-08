@@ -38,7 +38,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basDeNoel"
+        "categorie": "basDeNoel",
+        "image": "img/bas/noel/1.jpg"
       },
       {
         "id": "2",
@@ -46,7 +47,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basDeNoel"
+        "categorie": "basDeNoel",
+        "image": "img/bas/noel/2.jpg"
       },
       {
         "id": "3",
@@ -54,7 +56,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basDeNoel"
+        "categorie": "basDeNoel",
+        "image": "img/bas/noel/3.jpg"
       }
     ],
     "basUniforme": [
@@ -64,7 +67,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basUniforme"
+        "categorie": "basUniforme",
+        "image": "img/bas/uniforme/1.jpg"
     },
     {
         "id": "2",
@@ -72,15 +76,17 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basUniforme"
+        "categorie": "basUniforme",
+        "image": "img/bas/uniforme/2.jpg"
     },
       {
-         "id": "3",
+        "id": "3",
         "couleur": "vert",
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basUniforme"
+        "categorie": "basUniforme",
+        "image": "img/bas/uniforme/2.jpg"
       }
     ],
   "basCabaneASucre": [
@@ -90,7 +96,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basCabaneASucre"
+        "categorie": "basCabaneASucre",
+        "image": "img/bas/cabaneASucre/1.jpg"
     },
     {
         "id": "2",
@@ -98,7 +105,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basCabaneASucre"
+        "categorie": "basCabaneASucre",
+        "image": "img/bas/cabaneASucre/2.jpg"
     },
     {
         "id": "3",
@@ -106,7 +114,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basCabaneASucre"
+        "categorie": "basCabaneASucre",
+        "image": "img/bas/cabaneASucre/3.jpg"
     }
     ],
   "basSaintValentin": [
@@ -116,7 +125,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basSaintValentin"
+        "categorie": "basSaintValentin",
+        "image": "img/bas/saintValentin/1.jpg"
     },
     {
         "id": "2",
@@ -124,7 +134,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basSaintValentin"
+        "categorie": "basSaintValentin",
+      "image": "img/bas/saintValentin/2.jpg"
     },
     {
         "id": "3",
@@ -132,7 +143,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basSaintValentin"
+        "categorie": "basSaintValentin",
+      "image": "img/bas/saintValentin/3.jpg"
     }
     ],
   "basHalloween": [
@@ -142,7 +154,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basHalloween"
+        "categorie": "basHalloween",
+    "image": "img/bas/halloween/1.jpg"
   },
   {
         "id": "2",
@@ -150,7 +163,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basHalloween"
+        "categorie": "basHalloween",
+    "image": "img/bas/halloween/2.jpg"
   },
   {
         "id": "3",
@@ -158,7 +172,8 @@
         "grandeur": "large",
         "prixDetail": "4.99",
         "prixCoutant": "15.00",
-        "categorie": "basHalloween"
+        "categorie": "basHalloween",
+    "image": "img/bas/halloween/3.jpg"
   }
 ]
 

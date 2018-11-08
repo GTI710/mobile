@@ -9,10 +9,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="card-background-page">
-  Choisisez le produit que vous voulez acheter.
-  <ion-card *ngFor="let produits of produit">
-    <div class="card-title">{{produits.couleur}}</div>
+<ion-content>
+  <ion-list>
+    <ion-item item-start *ngFor="let products of product">
+      <ion-thumbnail >
+        <img src="img/3.jpg">
+      </ion-thumbnail>
+      <h2>{{products.name}}</h2>
+      <p>{{products.listPrice}}</p>
+      <button ion-button clear item-end  (click)="go()">Afficher</button>
+    </ion-item>
+  </ion-list>
+  <!--Choisisez le produit que vous voulez acheter.
+  <ion-card *ngFor="letproducts of produit">
+    <div class="card-title">{products.id}}</div>
   </ion-card>
   <!--<ion-list *ngFor="let categories of categorie">
     <button ion-item >

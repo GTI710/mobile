@@ -1,10 +1,10 @@
 import { Categories } from './categories';
 
 export class Produits {
-    id: number;
-    couleur: String;
-    grandeur: String;
-    prixDetail: number;
-    prixCoutant: number;
-    categorie: Categories;
+    idProductTemplate: number;
+    idCategory: number;
+    name: String;
+    averageRating: number;
+    description: String;
+    listPrice: number;
 }

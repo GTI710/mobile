@@ -13,7 +13,7 @@ import {NavController} from '@ionic/angular';
 export class BasUniformePage implements OnInit {
 
 
-    produit = Produits[0];
+    product = [];
     constructor(private navCtrl: NavController, private produitService: ProduitsService) { }
 
 
@@ -23,14 +23,12 @@ export class BasUniformePage implements OnInit {
 
     getProduits(): void {
         this.produitService.getProduitsUniforme().subscribe(
-            (data) => {
-                this.produit = data;
-                console.log(this.produit);
-            });
+            data => this.product = data['product']);
     }
+    /*
     go(categorieClick: Categories): void {
         console.log(categorieClick);
         this.navCtrl.navigateForward(categorieClick.path.toString());
-    }
+    }*/
 
 }

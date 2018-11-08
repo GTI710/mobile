@@ -18,21 +18,17 @@ export class ListPage implements OnInit {
 
   ngOnInit() {
     this.getCategories();
-
+    console.log(this.category);
   }
 
   getCategories(): void {
       this.categorieService.getCategories().subscribe(
-          (data) => {
-              this.category = data;
-              console.log(this.category);
-          }
-      );
+          data => this.category = data['productCategories']);
   }
 
-  go(categorieClick: Categories): void {
-      console.log(categorieClick);
-      this.navCtrl.navigateForward(categorieClick.path.toString());
+  go(path: String): void {
+      console.log(path);
+      this.navCtrl.navigateForward(path.toString());
   }
   // add back when alpha.4 is out
   // navigate(item) {
