@@ -19,7 +19,7 @@ export class BasCabaneASucrePage implements OnInit {
 
     getProduits(): void {
         this.produitService.getProduitsCabaneASucre().subscribe(
-            data => this.product = data['product']);
+            data => this.product = data['products']);
     }
     /*
     go(categorieClick: Categories): void {

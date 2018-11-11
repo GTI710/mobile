@@ -23,7 +23,7 @@ export class BasUniformePage implements OnInit {
 
     getProduits(): void {
         this.produitService.getProduitsUniforme().subscribe(
-            data => this.product = data['product']);
+            data => this.product = data['products']);
     }
     /*
     go(categorieClick: Categories): void {

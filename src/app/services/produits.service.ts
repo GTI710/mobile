@@ -8,28 +8,33 @@ import {Produits} from '../models/produits';
 })
 export class ProduitsService {
   // baseUrl: 'http://localhost:3000/basDeNoel';
+    idSelection: number;
 
   constructor (private http: HttpClient) { }
 
   getProduitsBasDeNoel(): Observable<any> {
     return this.http.get<Produits>('http://localhost:8080/api/product/findall/4');
   }
-  getProduitsId(id: number): Observable<any> {
-      const url = 'http://localhost:3000/' + `basDeNoel/${id}`;
-      return this.http.get<Produits>(url);
-  }
   getProduitsUniforme(): Observable<any> {
-      return this.http.get<Produits>('http://localhost:8080/1/7/');
+      return this.http.get<Produits>('http://localhost:8080/api/product/findall/7');
   }
   getProduitsHalloween(): Observable<any> {
-      return this.http.get<Produits>('http://localhost:8080/1/5/');
+      return this.http.get<Produits>('http://localhost:8080/api/product/findall/5');
   }
   getProduitsStValentin(): Observable<any> {
-      return this.http.get<Produits>('http://localhost:8080/1/6/');
+      return this.http.get<Produits>('http://localhost:8080/api/product/findall/6');
   }
   getProduitsCabaneASucre(): Observable<any> {
-      return this.http.get<Produits>('http://localhost:8080/1/8/');
+      return this.http.get<Produits>('http://localhost:8080/api/product/findall/8');
   }
-
-
+  getProduitsId(id: number): Observable<any> {
+    const url = `http://localhost:8080/api/product/` + id;
+    return this.http.get<Produits>(url);
+  }
+  setProduitsIndividuelId(id: number): void {
+      this.idSelection = id;
+  }
+  getProduitsIndividuelId() {
+      return this.idSelection;
+  }
 }

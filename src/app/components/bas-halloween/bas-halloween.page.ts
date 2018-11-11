@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {ProduitsService} from '../../services/produits.service';
-import {Categories} from '../../models/categories';
 import {NavController} from '../../../../node_modules/@ionic/angular';
 
 @Component({
@@ -20,7 +19,7 @@ export class BasHalloweenPage implements OnInit {
 
     getProduits(): void {
         this.produitService.getProduitsHalloween().subscribe(
-            data => this.product = data['product']);
+            data => this.product = data['products']);
     }
     /*
     go(categorieClick: Categories): void {

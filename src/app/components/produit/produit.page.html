@@ -8,8 +8,8 @@
 <ion-card>
   <img src="img/3.jpg"/>
   <ion-card-content>
-    <ion-card-title>
-      Nine Inch Nails Live
+    <ion-card-title *ngFor="let info of product">
+      {{info.listPrice}}
     </ion-card-title>
     <p>
       The most popular industrial group ever, and largely

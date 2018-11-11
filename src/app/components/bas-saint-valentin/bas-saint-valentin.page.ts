@@ -20,7 +20,7 @@ export class BasSaintValentinPage implements OnInit {
 
     getProduits(): void {
         this.produitService.getProduitsStValentin().subscribe(
-            data => this.product = data['product']);
+            data => this.product = data['products']);
     }
     /*
     go(categorieClick: Categories): void {

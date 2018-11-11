@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ProduitsService} from '../../services/produits.service';
+import {NavController} from '@ionic/angular';
 
 @Component({
   selector: 'app-produit',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProduitPage implements OnInit {
 
-  constructor() { }
+  produitId = this.produitService.getProduitsIndividuelId();
+  product = [];
+
+  constructor(private navCtrl: NavController, private produitService: ProduitsService) { }
 
   ngOnInit() {
+    this.getProduitIndividuel();
   }
 
+  getProduitIndividuel() {
+      this.produitService.getProduitsId(this.produitId).subscribe(
+          data => this.product = data['product']);
+  }
 }
