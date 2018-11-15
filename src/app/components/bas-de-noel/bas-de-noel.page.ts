@@ -11,7 +11,6 @@ import {Produits} from '../../models/produits';
 export class BasDeNoelPage implements OnInit {
 
     product = [];
-    idString: String;
     constructor(private navCtrl: NavController, private produitService: ProduitsService) { }
 
 
@@ -26,7 +25,6 @@ export class BasDeNoelPage implements OnInit {
 
     go(id: number): void {
         this.produitService.setProduitsIndividuelId(id);
-        this.navCtrl.navigateForward(id.toString());
+        this.navCtrl.navigateForward('1/4/' + id.toString());
     }
-
 }

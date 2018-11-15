@@ -10,7 +10,7 @@ import {NavController} from '@ionic/angular';
 export class ProduitPage implements OnInit {
 
   produitId = this.produitService.getProduitsIndividuelId();
-  product = [];
+  info = Object;
 
   constructor(private navCtrl: NavController, private produitService: ProduitsService) { }
 
@@ -20,6 +20,10 @@ export class ProduitPage implements OnInit {
 
   getProduitIndividuel() {
       this.produitService.getProduitsId(this.produitId).subscribe(
-          data => this.product = data['product']);
+          (data) => {
+              this.info = data['product'];
+              console.log(this.info);
+          }
+      );
   }
 }

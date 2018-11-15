@@ -28,8 +28,7 @@ export class ProduitsService {
       return this.http.get<Produits>('http://localhost:8080/api/product/findall/8');
   }
   getProduitsId(id: number): Observable<any> {
-    const url = `http://localhost:8080/api/product/` + id;
-    return this.http.get<Produits>(url);
+    return this.http.get<Produits>('http://localhost:8080/api/product/' + id);
   }
   setProduitsIndividuelId(id: number): void {
       this.idSelection = id;
