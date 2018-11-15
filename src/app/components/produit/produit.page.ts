@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ProduitsService} from '../../services/produits.service';
 import {NavController} from '@ionic/angular';
+import {Produits} from '../../models/produits';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-produit',
@@ -10,12 +12,16 @@ import {NavController} from '@ionic/angular';
 export class ProduitPage implements OnInit {
 
   produitId = this.produitService.getProduitsIndividuelId();
-  info = Object;
+  info: Object;
+  commentaires: Object;
+  produitInfo: Object;
+  tableauStorage = [];
 
-  constructor(private navCtrl: NavController, private produitService: ProduitsService) { }
+  constructor(private navCtrl: NavController, private produitService: ProduitsService, private storage: Storage) { }
 
   ngOnInit() {
     this.getProduitIndividuel();
+    this.getCommentaires();
   }
 
   getProduitIndividuel() {
@@ -26,4 +32,16 @@ export class ProduitPage implements OnInit {
           }
       );
   }
+    getCommentaires() {
+        this.produitService.getProduitsId(this.produitId).subscribe(
+            (data) => {
+                this.commentaires = data['product']['comments'];
+                console.log(this.commentaires);
+            }
+        );
+    }
+    ajoutAuPanier() {
+        // this.tableauStorage.push(this.info);
+        this.storage.set(`Bas:${ this.produitInfo }`, this.info);
+    }
 }

@@ -1,5 +1,3 @@
-import { Categories } from './categories';
-
 export class Produits {
     idProductTemplate: number;
     idCategory: number;

@@ -7,7 +7,8 @@ import {Produits} from '../models/produits';
   providedIn: 'root'
 })
 export class ProduitsService {
-  // baseUrl: 'http://localhost:3000/basDeNoel';
+  // baseUrl: '172.16.5.104';
+    // http://localhost
     idSelection: number;
 
   constructor (private http: HttpClient) { }
@@ -27,7 +28,7 @@ export class ProduitsService {
   getProduitsCabaneASucre(): Observable<any> {
       return this.http.get<Produits>('http://localhost:8080/api/product/findall/8');
   }
-  getProduitsId(id: number): Observable<any> {
+  getProduitsId(id: number) {
     return this.http.get<Produits>('http://localhost:8080/api/product/' + id);
   }
   setProduitsIndividuelId(id: number): void {

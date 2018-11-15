@@ -11,7 +11,7 @@ import { _ } from 'lodash';
 })
 export class ListPage implements OnInit {
 
-  category = [];
+  category: Object;
 
   constructor(private categorieService: CategoriesService, private navCtrl: NavController) {
   }

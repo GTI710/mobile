@@ -10,7 +10,7 @@ import {Produits} from '../../models/produits';
 })
 export class BasDeNoelPage implements OnInit {
 
-    product = [];
+    product: Object;
     constructor(private navCtrl: NavController, private produitService: ProduitsService) { }
 
 

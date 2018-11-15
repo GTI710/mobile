@@ -1,20 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>produit</ion-title>
+    <ion-title>{{info.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 <ion-card>
-  <img src="img/3.jpg"/>
+  <!--<img src="img/3.jpg"/> -->
   <ion-card-content>
-    <ion-card-title *ngFor="let infos of info">
-      {{infos.name}}
+    <ion-card-title>
+      {{info.name}}
     </ion-card-title>
     <p>
-      {{infos.description}}
+      {{info.description}}<br/>
+      Rating : {{info.averageRating}}<br/>
+      Prix : {{info.listPrice}} $<br/>
     </p>
+    <button ion-button block (click)="ajoutAuPanier()">Ajouter au Panier</button>
   </ion-card-content>
 </ion-card>
+  <ion-card>
+  <ion-card-content>
+    <ion-card-title>
+      Commentaires
+    </ion-card-title>
+    <p *ngFor="let commentaire of commentaires">
+      {{commentaire.body}}
+    </p>
+  </ion-card-content>
+  </ion-card>
 
 </ion-content>
