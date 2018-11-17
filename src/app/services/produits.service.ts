@@ -14,7 +14,7 @@ export class ProduitsService {
   constructor (private http: HttpClient) { }
 
   getProduitsBasDeNoel(): Observable<any> {
-    return this.http.get<Produits>('http://localhost:8080/api/product/findall/4');
+    return this.http.get<Produits>('http://10.0.1.13:8080/api/product/findall/4');
   }
   getProduitsUniforme(): Observable<any> {
       return this.http.get<Produits>('http://localhost:8080/api/product/findall/7');
@@ -26,10 +26,10 @@ export class ProduitsService {
       return this.http.get<Produits>('http://localhost:8080/api/product/findall/6');
   }
   getProduitsCabaneASucre(): Observable<any> {
-      return this.http.get<Produits>('http://localhost:8080/api/product/findall/8');
+      return this.http.get<Produits>('http://10.0.1.13:8080/api/product/findall/8');
   }
   getProduitsId(id: number) {
-    return this.http.get<Produits>('http://localhost:8080/api/product/' + id);
+    return this.http.get<Produits>('http://10.0.1.13:8080/api/product/' + id);
   }
   setProduitsIndividuelId(id: number): void {
       this.idSelection = id;
