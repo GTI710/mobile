@@ -13,11 +13,11 @@
   <ion-list>
     <ion-item item-start *ngFor="let products of product">
       <ion-thumbnail >
-        <img src="{products.image}}">
+        <img src="img/3.jpg">
       </ion-thumbnail>
       <h2>{{products.name}}</h2>
       <p>{{products.listPrice}}</p>
-      <button ion-button clear item-end  (click)="getProduits()">Afficher</button>
+      <button ion-button clear item-end  (click)="go(products.idProductTemplate)">Afficher</button>
     </ion-item>
   </ion-list>
   <!--Choisisez le produit que vous voulez acheter.

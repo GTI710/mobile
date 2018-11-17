@@ -37,4 +37,7 @@ export class ProduitsService {
   getProduitsIndividuelId() {
       return this.idSelection;
   }
+  postCommentaire(commentaire: String) {
+      return this.http.post('http://localhost:8080/api/comment', commentaire);
+  }
 }

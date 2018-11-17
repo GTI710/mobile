@@ -22,9 +22,8 @@ export class BasSaintValentinPage implements OnInit {
         this.produitService.getProduitsStValentin().subscribe(
             data => this.product = data['products']);
     }
-    /*
-    go(categorieClick: Categories): void {
-        console.log(categorieClick);
-        this.navCtrl.navigateForward(categorieClick.path.toString());
-    }*/
+    go(id: number): void {
+        this.produitService.setProduitsIndividuelId(id);
+        this.navCtrl.navigateForward('1/6/' + id.toString());
+    }
 }

@@ -21,10 +21,9 @@ export class BasHalloweenPage implements OnInit {
         this.produitService.getProduitsHalloween().subscribe(
             data => this.product = data['products']);
     }
-    /*
-    go(categorieClick: Categories): void {
-        console.log(categorieClick);
-        this.navCtrl.navigateForward(categorieClick.path.toString());
-    }*/
+    go(id: number): void {
+        this.produitService.setProduitsIndividuelId(id);
+        this.navCtrl.navigateForward('1/5/' + id.toString());
+    }
 
 }

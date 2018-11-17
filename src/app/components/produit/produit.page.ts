@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ProduitsService} from '../../services/produits.service';
 import {NavController} from '@ionic/angular';
-import {Produits} from '../../models/produits';
+import {Commentaire} from '../../models/commentaire';
 import { Storage } from '@ionic/storage';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-produit',
@@ -16,8 +17,14 @@ export class ProduitPage implements OnInit {
   commentaires: Object;
   produitInfo: Object;
   tableauStorage = [];
+  quantite: number;
+  commentaireUsager: String;
+  commentaireModel: Commentaire;
 
-  constructor(private navCtrl: NavController, private produitService: ProduitsService, private storage: Storage) { }
+
+
+  constructor(private navCtrl: NavController, private produitService: ProduitsService,
+              private storage: Storage, private toast: ToastController) { }
 
   ngOnInit() {
     this.getProduitIndividuel();
@@ -40,8 +47,19 @@ export class ProduitPage implements OnInit {
             }
         );
     }
+    postCommentaireUsager() {
+      this.commentaireModel.body = this.commentaireUsager;
+      this.produitService.postCommentaire(this.commentaireModel.body);
+    }
     ajoutAuPanier() {
         // this.tableauStorage.push(this.info);
         this.storage.set(`Bas:${ this.produitInfo }`, this.info);
+        const toast = this.toast.create({
+            message: 'Page added to favourites!',
+            duration: 3000,
+            position: 'bottom',
+            showCloseButton: true
+        });
+        // toast.present();
     }
 }

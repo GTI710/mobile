@@ -9,6 +9,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <ion-list>
+    <ion-item item-start *ngFor="let products of product">
+      <ion-thumbnail >
+      </ion-thumbnail>
+      <h2>test</h2>
+      <p>test</p>
+      <button ion-button clear item-end  (click)="go(products.idProductTemplate)">Afficher</button>
+    </ion-item>
+  </ion-list>
+  <!--Choisisez le produit que vous voulez acheter.
+  <ion-card *ngFor="letproducts of produit">
+    <div class="card-title">{products.id}}</div>
+  </ion-card>
+  <!--<ion-list *ngFor="let categories of categorie">
+    <button ion-item >
+      {{categories.categorie}}
+    </button>
+  </ion-list>-->
 </ion-content>

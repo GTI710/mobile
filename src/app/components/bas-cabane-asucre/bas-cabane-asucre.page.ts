@@ -21,10 +21,9 @@ export class BasCabaneASucrePage implements OnInit {
         this.produitService.getProduitsCabaneASucre().subscribe(
             data => this.product = data['products']);
     }
-    /*
-    go(categorieClick: Categories): void {
-        console.log(categorieClick);
-        this.navCtrl.navigateForward(categorieClick.path.toString());
-    }*/
+    go(id: number): void {
+        this.produitService.setProduitsIndividuelId(id);
+        this.navCtrl.navigateForward('1/8/' + id.toString());
+    }
 
 }
