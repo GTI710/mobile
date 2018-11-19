@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Categories } from '../../models/categories';
 import { CategoriesService } from '../../services/categories.service';
 import { NavController } from '../../../../node_modules/@ionic/angular';
-import { _ } from 'lodash';
 
 @Component({
   selector: 'app-list',

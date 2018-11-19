@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'app-panier',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PanierPage implements OnInit {
 
-  constructor() { }
+  storageData: object;
+
+  constructor(private storage: Storage) { }
 
   ngOnInit() {
+     this.storageData =  this.storage.get('Basundefined').then((value) => {
+         this.storageData = value;
+     });
+     console.log(this.storageData);
   }
 
 }

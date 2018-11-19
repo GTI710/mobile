@@ -37,6 +37,7 @@
     "cordova-sqlite-storage": "2.5.1",
     "core-js": "^2.5.3",
     "lodash": "^4.17.11",
+    "ng2-bootstrap": "^1.6.3",
     "rxjs": "6.2.2",
     "zone.js": "^0.8.26"
   },

@@ -5,6 +5,7 @@ import {Commentaire} from '../../models/commentaire';
 import { Storage } from '@ionic/storage';
 import { ToastController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-produit',
   templateUrl: './produit.page.html',
@@ -53,7 +54,7 @@ export class ProduitPage implements OnInit {
     }
     ajoutAuPanier() {
         // this.tableauStorage.push(this.info);
-        this.storage.set(`Bas:${ this.produitInfo }`, this.info);
+        this.storage.set(`Bas${ this.produitInfo }`, this.info);
         const toast = this.toast.create({
             message: 'Page added to favourites!',
             duration: 3000,
