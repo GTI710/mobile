@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Check-Out
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding">
+  <ion-label color="primary" floating [(ngModel)]="name">Prénom</ion-label>
+    <ion-input></ion-input>
+    <ion-label color="primary" floating [(ngModel)]="lastName">Nom</ion-label>
+    <ion-input></ion-input>
+    <ion-label color="primary" floating [(ngModel)]="address">Adresse</ion-label>
+    <ion-input></ion-input>
+    <ion-label color="primary" floating [(ngModel)]="phone">Numéro de téléphone</ion-label>
+    <ion-input></ion-input>
+    <ion-label color="primary" floating [(ngModel)]="email">Courriel</ion-label>
+    <ion-input></ion-input>
+    <ion-label color="primary" floating [(ngModel)]="postalCode">Code Postal</ion-label>
+    <ion-input></ion-input>
+    <ion-label color="primary" floating [(ngModel)]="creditCard">Numéro de carte de crédit</ion-label>
+    <ion-input></ion-input>
+    <ion-label color="primary" floating [(ngModel)]="creditCardCvv">Cvv de la Carte de Crédit</ion-label>
+    <ion-input></ion-input>
+    <ion-label color="primary" floating [(ngModel)]="creditCardName">Nom sur la Carte de Crédit</ion-label>
+    <ion-input></ion-input>
+    <ion-label color="primary" floating [(ngModel)]="creditCardExpiration">Date d'expiration de la Carte de Crédit</ion-label>
+    <ion-input></ion-input>
+  <button ion-button  (click)="clear()">Commander les bas</button>
+</ion-content>

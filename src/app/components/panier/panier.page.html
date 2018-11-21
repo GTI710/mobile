@@ -11,13 +11,15 @@
 
 <ion-content>
   <ion-list>
-    <ion-item item-start *ngFor="let products of product">
+    <ion-item>
       <ion-thumbnail >
       </ion-thumbnail>
-      <h2>test</h2>
-      <p>test</p>
-      <button ion-button clear item-end  (click)="go(products.idProductTemplate)">Afficher</button>
+      <h2>{{storage.name}}</h2>
+      <p>{{storage.listPrice}}</p>
+      <button ion-button clear item-end  (click)="remove(products.idProductTemplate)">Retirer</button>
     </ion-item>
+
+    <button ion-button (click)="checkout()">Check-Out</button>
   </ion-list>
   <!--Choisisez le produit que vous voulez acheter.
   <ion-card *ngFor="letproducts of produit">

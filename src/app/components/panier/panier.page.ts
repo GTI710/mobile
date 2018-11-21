@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
+import {NavController} from '../../../../node_modules/@ionic/angular';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class PanierPage implements OnInit {
 
   storageData: object;
 
-  constructor(private storage: Storage) { }
+  constructor(private storage: Storage, private navCtrl: NavController) { }
 
   ngOnInit() {
      this.storageData =  this.storage.get('Basundefined').then((value) => {
@@ -20,4 +21,9 @@ export class PanierPage implements OnInit {
      console.log(this.storageData);
   }
 
+  checkout() {
+      this.navCtrl.navigateForward('checkout');
+  }
+  remove()  {
+  }
 }
