@@ -10,10 +10,10 @@
 </ion-header>
 
 <ion-content class="card-background-page">
-  Choisisez le type de bas que vous voulez acheter.
+  <h1 class="header">Bienvenue sur l'application BasDeBonsens</h1>
   <ion-card *ngFor="let categorie of category" (click)="go(categorie.parentPath)">
-    <img src="img/card-xmas.jpg" />
-    <div class="card-title">{{categorie.name}}</div>
+    <img *ngIf="categorie.idProductCategory > 2" src='img/{{categorie.idProductCategory}}.jpg' />
+    <div *ngIf="categorie.idProductCategory > 2" class="card-title">{{categorie.name}}</div>
   </ion-card>
 </ion-content>
 

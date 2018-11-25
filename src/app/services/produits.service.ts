@@ -14,22 +14,22 @@ export class ProduitsService {
   constructor (private http: HttpClient) { }
 
   getProduitsBasDeNoel(): Observable<any> {
-    return this.http.get<Produits>('http://10.0.1.13:8080/api/product/findall/4');
+    return this.http.get<Produits>('http://localhost:8080/api/product/findall/4');
   }
   getProduitsUniforme(): Observable<any> {
-      return this.http.get<Produits>('http://10.0.1.13:8080/api/product/findall/7');
+      return this.http.get<Produits>('http://localhost:8080/api/product/findall/7');
   }
   getProduitsHalloween(): Observable<any> {
-      return this.http.get<Produits>('http://10.0.1.13:8080/api/product/findall/5');
+      return this.http.get<Produits>('http://localhost:8080/api/product/findall/5');
   }
   getProduitsStValentin(): Observable<any> {
-      return this.http.get<Produits>('http://10.0.1.13:8080/api/product/findall/6');
+      return this.http.get<Produits>('http://localhost:8080/api/product/findall/6');
   }
   getProduitsCabaneASucre(): Observable<any> {
-      return this.http.get<Produits>('http://10.0.1.13:8080/api/product/findall/8');
+      return this.http.get<Produits>('http://localhost:8080/api/product/findall/8');
   }
-  getProduitsId(id: number) {
-    return this.http.get<Produits>('http://10.0.1.13:8080/api/product/' + id);
+  getProduitsId(id: Object) {
+    return this.http.get<Produits>('http://localhost:8080/api/product/' + id);
   }
   setProduitsIndividuelId(id: number): void {
       this.idSelection = id;
@@ -37,7 +37,33 @@ export class ProduitsService {
   getProduitsIndividuelId() {
       return this.idSelection;
   }
-  postCommentaire(commentaire: String) {
-      return this.http.post('http://10.0.1.13:8080/api/comment', commentaire);
+  postCommentaire(commentaire) {
+      return this.http.post('http://localhost:8080/api/comment', commentaire).subscribe(res => {
+              console.log(res);
+          },
+          err => {
+              console.log('Error occured');
+          }
+      );
+  }
+
+  postCheckOut(checkout) {
+      return this.http.post('http://localhost:8080/api/sale', checkout).subscribe(res => {
+              console.log(res);
+          },
+          err => {
+              console.log('Error occured');
+          }
+      );
+  }
+
+  postRating(rating) {
+      return this.http.post('http://localhost:8080/api/rating', rating).subscribe(res => {
+              console.log(res);
+          },
+          err => {
+              console.log('Error occured');
+          }
+      );
   }
 }

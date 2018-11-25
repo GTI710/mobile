@@ -4,53 +4,69 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>{{info.name}}</ion-title>
+    <ion-buttons end>
+      <ion-button icon-only (click)="back(info.idCategory)">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 <ion-card>
-  <!--<img src="img/3.jpg"/> -->
+  <!--<img src="img/3. </ion -->
   <ion-card-content>
-    <ion-card-title>
+    <ion-card-title class="header">
       {{info.name}}
     </ion-card-title>
-    <p>
-      {{info.description}}<br/>
-      Rating : {{info.averageRating}}<br/>
-      Prix : {{info.listPrice}} $<br/>
-    </p>
-   <!-- <ion-item>
+    <ion-item>
+      <ion-label>{{info.description}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Score : {{info.averageRating | number:'1.0-0'}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prix : {{info.listPrice}}</ion-label>
+    </ion-item>
+    <ion-item>
       <ion-label>Quantité</ion-label>
       <ion-select [(ngModel)]="quantite" interface="popover">
-        <ion-option value="1">1</ion-option>
-        <ion-option value="2">2</ion-option>
-        <ion-option value="3">3</ion-option>
-        <ion-option value="4">4</ion-option>
-        <ion-option value="5">5</ion-option>
-        <ion-option value="6">6</ion-option>
-        <ion-option value="7">7</ion-option>
-        <ion-option value="8">8</ion-option>
-        <ion-option value="9">9</ion-option>
-        <ion-option value="10">10</ion-option>
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="5">5</ion-select-option>
+        <ion-select-option value="6">6</ion-select-option>
+        <ion-select-option value="7">7</ion-select-option>
+        <ion-select-option value="8">8</ion-select-option>
+        <ion-select-option value="9">9</ion-select-option>
+        <ion-select-option value="10">10</ion-select-option>
       </ion-select>
-    </ion-item>-->
-    <button ion-button block (click)="ajoutAuPanier()">Ajouter au Panier</button>
+    </ion-item>
+    <ion-button expand="full" shape="round" (click)="ajoutAuPanier(info.idProductTemplate, quantite)">Ajouter au Panier</ion-button>
   </ion-card-content>
 </ion-card>
+<ion-card>
+<ion-card-content>
+  <ion-card-title class="header">
+    Donner un Score au produit
+  </ion-card-title>
+    <ion-range [(ngModel)]="rating" min="0" max="10" color="secondary" snaps="true" pin="true">
+    </ion-range>
+    <ion-button expand="full" color="secondary" shape="round" (click)="postRating(rating.valueOf(), info.idProductTemplate)">Ajouter le Score</ion-button>
+</ion-card-content>
+</ion-card>
   <ion-card>
-  <ion-card-content>
-    <ion-card-title>
-      Commentaires
-    </ion-card-title>
-    <p *ngFor="let commentaire of commentaires">
-      {{commentaire.body}}
-    </p>
-    <ion-item>
-      <ion-label color="primary" floating [(ngModel)]="commentaireUsager">Ajouter un commentaire</ion-label>
-      <ion-input></ion-input>
-      <button ion-button block (click)="postCommentaireUsager()">Ajouter le commentaire</button>
-    </ion-item>
-  </ion-card-content>
+    <ion-card-content>
+      <ion-card-title class="header">
+        Commentaires sur le produit
+      </ion-card-title>
+      <p ng-If="info" *ngFor="let commentaire of info.comments">
+        {{commentaire.body}}
+      </p>
+        <ion-input #comment type="text" placeholder="Écrire votre commentaire ici"></ion-input>
+        <ion-button expand="full" color="secondary" shape="round" (click)="postCommentaireUsager(comment.value, info.idProductTemplate)">Ajouter le commentaire</ion-button>
+    </ion-card-content>
   </ion-card>
 
 </ion-content>

@@ -6,27 +6,26 @@
     <ion-title>
       Bas Halloween
     </ion-title>
+    <ion-buttons end>
+      <ion-button icon-only (click)="back()">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="padding">
   <ion-list>
     <ion-item item-start *ngFor="let products of product">
       <ion-thumbnail >
         <img src="img/3.jpg">
       </ion-thumbnail>
-      <h2>{{products.name}}</h2>
-      <p>{{products.listPrice}}</p>
-      <button ion-button clear item-end  (click)="go(products.idProductTemplate)">Afficher</button>
+      <ion-label>
+        <h2>{{products.name}}</h2>
+        <p>{{products.listPrice}} $
+          <ion-button color="dark"float-right (click)="go(products.idProductTemplate)">Afficher</ion-button>
+        </p>
+      </ion-label>
     </ion-item>
   </ion-list>
-  <!--Choisisez le produit que vous voulez acheter.
-  <ion-card *ngFor="letproducts of produit">
-    <div class="card-title">{products.id}}</div>
-  </ion-card>
-  <!--<ion-list *ngFor="let categories of categorie">
-    <button ion-item >
-      {{categories.categorie}}
-    </button>
-  </ion-list>-->
 </ion-content>

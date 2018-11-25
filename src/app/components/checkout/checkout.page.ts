@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Validators, FormControl, FormGroup} from '@angular/forms';
-import { Storage } from '@ionic/storage';
 import { AlertController, NavController } from '@ionic/angular';
+import {ProduitsService} from '../../services/produits.service';
 
 
 @Component({
@@ -11,38 +10,23 @@ import { AlertController, NavController } from '@ionic/angular';
 })
 export class CheckoutPage implements OnInit {
 
-  name: String;
-  lastName: String;
-  address: String;
-  phone: String;
-  email: String;
-  postalCode: String;
-  creditCard: String;
-  creditCardCvv: String;
-  creditCardName: String;
-  creditCardExpiration: String;
-
-  constructor(private storage: Storage, private alertCtrl: AlertController, private navCtrl: NavController) { }
+  constructor(private alertCtrl: AlertController, private navCtrl: NavController,
+              private checkoutPost: ProduitsService) { }
 
   ngOnInit() {
   }
-  clear() {
-    this.storage.clear().then(() => {
-        console.log('all keys cleared');
-    });
-    this.name = '';
-    this.lastName = '';
-    this.address = '';
-    this.phone = '';
-    this.email = '';
-    this.postalCode = '';
-    this.creditCard = '';
-    this.creditCardCvv = '';
-    this.creditCardName = '';
-    this.creditCardExpiration = '';
-
+  checkout(name, address, postalCode, country, ville) {
+    const checkout = {
+        'nameClient': name,
+        'street': address,
+        'city': ville,
+        'country': country,
+        'zipcode': postalCode,
+    };
+    this.checkoutPost.postCheckOut(checkout);
     this.presentAlert();
-    this.navCtrl.navigateForward('panier');
+    this.navCtrl.navigateForward('list');
+    localStorage.clear();
   }
   async presentAlert() {
       const alert = await this.alertCtrl.create({

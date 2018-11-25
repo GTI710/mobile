@@ -14,7 +14,7 @@ export class CategoriesService {
   constructor(private http: HttpClient) {}
 
   getCategories(): Observable<any> {
-    const url = 'http://10.0.1.13:8080/api/productcategory';
+    const url = 'http://localhost:8080/api/productcategory';
     return this.http.get<Categories>(url);
   }
 

@@ -26,4 +26,7 @@ export class BasSaintValentinPage implements OnInit {
         this.produitService.setProduitsIndividuelId(id);
         this.navCtrl.navigateForward('1/6/' + id.toString());
     }
+    back() {
+        this.navCtrl.goBack();
+    }
 }

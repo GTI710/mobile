@@ -9,7 +9,7 @@ import {NavController} from '../../../../node_modules/@ionic/angular';
 })
 export class BasCabaneASucrePage implements OnInit {
 
-    product = [];
+    product = Object;
     constructor(private navCtrl: NavController, private produitService: ProduitsService) { }
 
 
@@ -24,6 +24,9 @@ export class BasCabaneASucrePage implements OnInit {
     go(id: number): void {
         this.produitService.setProduitsIndividuelId(id);
         this.navCtrl.navigateForward('1/8/' + id.toString());
+    }
+    back() {
+        this.navCtrl.goBack();
     }
 
 }

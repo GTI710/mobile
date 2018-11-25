@@ -11,14 +11,40 @@
 
 <ion-content>
   <ion-list>
+    <ion-item item-start *ngFor="let produit of produits">
+      <ion-thumbnail>
+        <img src="img/3.jpg">
+      </ion-thumbnail>
+      <ion-label>
+      <h2>{{produit.name}}</h2>
+      <p>Prix Unitaire : {{produit.listPrice}}
+        <ion-button color="danger" float-right (click)="remove(produit.idProductTemplate)">Retirer</ion-button>
+        <br> Quantité : {{produit.countInCart}}
+      </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="header">Total de la commande sans taxe est {{total | number:'1.2-2'}} $</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="header">TPS : {{total*0.05 | number:'1.2-2'}} $</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="header">TVQ : {{total*0.0975 | number:'1.2-2'}} $</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="header">Total de la commande avec les taxes est {{total*0.0975 + total*0.05 + total | number:'1.2-2'}} $</ion-label>
+    </ion-item>
+    <ion-button expand="full" shape="round" (click)="checkout()">Passé à la caisse</ion-button>
+    </ion-list>
+  <!--<ion-list>
     <ion-item>
       <ion-thumbnail >
       </ion-thumbnail>
       <h2>{{storage.name}}</h2>
       <p>{{storage.listPrice}}</p>
-      <button ion-button clear item-end  (click)="remove(products.idProductTemplate)">Retirer</button>
+      <button ion-button clear item-end  (click)="remove()">Retirer</button>
     </ion-item>
-
     <button ion-button (click)="checkout()">Check-Out</button>
   </ion-list>
   <!--Choisisez le produit que vous voulez acheter.

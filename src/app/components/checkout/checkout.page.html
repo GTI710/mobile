@@ -10,25 +10,37 @@
 </ion-header>
 
 <ion-content class="padding">
-  <ion-label color="primary" floating [(ngModel)]="name">Prénom</ion-label>
-    <ion-input></ion-input>
-    <ion-label color="primary" floating [(ngModel)]="lastName">Nom</ion-label>
-    <ion-input></ion-input>
-    <ion-label color="primary" floating [(ngModel)]="address">Adresse</ion-label>
-    <ion-input></ion-input>
-    <ion-label color="primary" floating [(ngModel)]="phone">Numéro de téléphone</ion-label>
-    <ion-input></ion-input>
-    <ion-label color="primary" floating [(ngModel)]="email">Courriel</ion-label>
-    <ion-input></ion-input>
-    <ion-label color="primary" floating [(ngModel)]="postalCode">Code Postal</ion-label>
-    <ion-input></ion-input>
-    <ion-label color="primary" floating [(ngModel)]="creditCard">Numéro de carte de crédit</ion-label>
-    <ion-input></ion-input>
-    <ion-label color="primary" floating [(ngModel)]="creditCardCvv">Cvv de la Carte de Crédit</ion-label>
-    <ion-input></ion-input>
-    <ion-label color="primary" floating [(ngModel)]="creditCardName">Nom sur la Carte de Crédit</ion-label>
-    <ion-input></ion-input>
-    <ion-label color="primary" floating [(ngModel)]="creditCardExpiration">Date d'expiration de la Carte de Crédit</ion-label>
-    <ion-input></ion-input>
-  <button ion-button  (click)="clear()">Commander les bas</button>
+  <ion-item>
+    <ion-label color="secondary">Nom</ion-label>
+    <ion-input #name type="text" placeholder="Nom et Prénom"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="secondary">Adresse</ion-label>
+    <ion-input #address type="text" placeholder="Addresse"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="secondary">Ville</ion-label>
+    <ion-input #ville type="text" placeholder="Ville"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="secondary">Pays</ion-label>
+    <ion-input #country type="text" placeholder="Pays"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="secondary">Code Postal</ion-label>
+    <ion-input #postalCode type="text" placeholder="Code Postal"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="secondary">Numéro de téléphone</ion-label>
+    <ion-input #phone type="text" placeholder="Numéro de téléphone"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="secondary">Courriel</ion-label>
+    <ion-input #email type="text" placeholder="Courriel"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="secondary">Numéro de carte de crédit</ion-label>
+    <ion-input #creditCard type="text" placeholder="Numéro de carte de crédit"></ion-input>
+  </ion-item>
+  <ion-button shape="round" expand="full"  (click)="checkout(name.value, address.value, ville.value, country.value, postalCode.value)">Cammander les bas</ion-button>
 </ion-content>

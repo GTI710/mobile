@@ -27,4 +27,7 @@ export class BasDeNoelPage implements OnInit {
         this.produitService.setProduitsIndividuelId(id);
         this.navCtrl.navigateForward('1/4/' + id.toString());
     }
+    back() {
+        this.navCtrl.goBack();
+    }
 }

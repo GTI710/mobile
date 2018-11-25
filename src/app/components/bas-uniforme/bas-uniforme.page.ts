@@ -29,4 +29,7 @@ export class BasUniformePage implements OnInit {
         this.produitService.setProduitsIndividuelId(id);
         this.navCtrl.navigateForward('1/7/' + id.toString());
     }
+    back() {
+        this.navCtrl.goBack();
+    }
 }

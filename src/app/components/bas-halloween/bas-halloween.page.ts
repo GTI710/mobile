@@ -25,5 +25,8 @@ export class BasHalloweenPage implements OnInit {
         this.produitService.setProduitsIndividuelId(id);
         this.navCtrl.navigateForward('1/5/' + id.toString());
     }
+    back() {
+        this.navCtrl.goBack();
+    }
 
 }
