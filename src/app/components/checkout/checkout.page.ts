@@ -19,6 +19,7 @@ export class CheckoutPage implements OnInit {
   checkout(name, address, postalCode, country, ville) {
 
     const checkout = {
+        
         'nameClient': name,
         'street': address,
         'city': ville,
@@ -34,7 +35,7 @@ export class CheckoutPage implements OnInit {
   }
   async presentAlert() {
       const alert = await this.alertCtrl.create({
-          header: 'Votre c',
+          header: 'Votre commande est envoyé',
           subHeader: '',
           message: '',
           buttons: ['Merci!']
