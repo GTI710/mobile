@@ -27,11 +27,28 @@ export class PanierPage implements OnInit {
     }
 
     getTotal() {
-        this.total = 0;
+        // this.total = 0;
         // @ts-ignore
-        this.produit.forEach(x => this.total += Number(x.listPrice));
+       this.produit.forEach(x => this.total += Number(x.listPrice * x.countInCart));
     }
+    modifierquantite(id: number, quantity: string): boolean {
+        if (id !== null && id !== undefined) {
+            let itemsInCart = {};
+            if (localStorage.getItem('itemsInCart') !== null) {
+                itemsInCart = JSON.parse(localStorage.getItem('itemsInCart'));
+            }
 
+            itemsInCart[id] = +quantity;
+            localStorage.setItem('itemsInCart', JSON.stringify(itemsInCart));
+
+            // @ts-ignore
+            this.produits.filter(x => x.idProductTemplate === id)[0].countInCart = +quantity;
+            this.getTotal();
+            return true;
+        }
+
+        return false;
+    }
     getItemsInPanier() {
         let panier = {};
         this.produits = [];
@@ -73,7 +90,6 @@ export class PanierPage implements OnInit {
             this.getTotal();
             return true;
         }
-        this.getTotal();
         return false;
     }
 }

@@ -15,7 +15,9 @@ export class CheckoutPage implements OnInit {
 
   ngOnInit() {
   }
+
   checkout(name, address, postalCode, country, ville) {
+
     const checkout = {
         'nameClient': name,
         'street': address,
@@ -24,18 +26,45 @@ export class CheckoutPage implements OnInit {
         'zipcode': postalCode,
     };
     this.checkoutPost.postCheckOut(checkout);
+    //this.presentAlertConfirm();
     this.presentAlert();
     this.navCtrl.navigateForward('list');
     localStorage.clear();
+
   }
   async presentAlert() {
       const alert = await this.alertCtrl.create({
-          header: 'Votre commande est envoyé',
+          header: 'Votre c',
           subHeader: '',
           message: '',
           buttons: ['Merci!']
       });
       await alert.present();
   }
+    async presentAlertConfirm() {
+        const alert = await this.alertCtrl.create({
+            header: 'Votre commande est sur le point d\'être envoyé',
+            message: '',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    cssClass: 'secondary',
+                    handler: () => {
+                        alert.dismiss(false);
+                        return false;
+                    }
+                }, {
+                    text: 'Okay',
+                    handler: () => {
+                        alert.dismiss(true);
+                        return true;
+                    }
+                }
+            ]
+        });
+
+        await alert.present();
+    }
 
 }
