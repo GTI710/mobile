@@ -112,7 +112,7 @@ export class ProduitPage implements OnInit {
     async presentAlertQuantite() {
         const alert = await this.alertCtrl.create({
             header: '',
-            subHeader: '\'Vous n\'avez pas choisit de quantité',
+            subHeader: '\Vous n\'avez pas choisit de quantité',
             message: '',
             buttons: ['Merci!']
         });

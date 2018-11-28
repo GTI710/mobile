@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NavController} from '../../../../node_modules/@ionic/angular';
+import {NavController} from '@ionic/angular';
 import {ProduitsService} from '../../services/produits.service';
 
 
@@ -35,6 +35,7 @@ export class PanierPage implements OnInit {
     getItemsInPanier() {
         let panier = {};
         this.produits = [];
+        this.total = 0;
 
         if (localStorage.getItem('itemsInCart') !== null && localStorage.getItem('itemsInCart') !== undefined) {
             panier = JSON.parse(localStorage.getItem('itemsInCart'));
