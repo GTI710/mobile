@@ -1,0 +1,181 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "bas de noel",
+      "image": "img/card-xmas.jpg",
+      "path": "/basDeNoel"
+    },
+    {
+      "id": 2,
+      "name": "bas uniforme",
+      "image": "img/card-uniform.jpg",
+      "path": "/basUniforme"
+    },
+    {
+      "id": 3,
+      "name": "bas de cabane a sucre",
+      "image": "img/card-cabane-a-sucre2.jpg",
+      "path": "/basCabaneASucre"
+    },
+    {
+      "id": 4,
+      "name": "bas de Saint-Valentin",
+      "image": "img/card-valentin.jpg",
+      "path": "/basSaintValentin"
+    },
+    {
+      "id": 5,
+      "name": "bas de l'Halloween",
+      "image": "img/card-halloween.jpg",
+      "path": "/basHalloween"
+    }
+  ],
+    "basDeNoel": [
+      {
+        "id": "1",
+        "couleur": "blanc",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basDeNoel",
+        "image": "img/bas/noel/1.jpg"
+      },
+      {
+        "id": "2",
+        "couleur": "rouge",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basDeNoel",
+        "image": "img/bas/noel/2.jpg"
+      },
+      {
+        "id": "3",
+        "couleur": "vert",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basDeNoel",
+        "image": "img/bas/noel/3.jpg"
+      }
+    ],
+    "basUniforme": [
+    {
+        "id": "1",
+        "couleur": "blanc",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basUniforme",
+        "image": "img/bas/uniforme/1.jpg"
+    },
+    {
+        "id": "2",
+        "couleur": "rouge",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basUniforme",
+        "image": "img/bas/uniforme/2.jpg"
+    },
+      {
+        "id": "3",
+        "couleur": "vert",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basUniforme",
+        "image": "img/bas/uniforme/2.jpg"
+      }
+    ],
+  "basCabaneASucre": [
+    {
+        "id": "1",
+        "couleur": "blanc",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basCabaneASucre",
+        "image": "img/bas/cabaneASucre/1.jpg"
+    },
+    {
+        "id": "2",
+        "couleur": "rouge",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basCabaneASucre",
+        "image": "img/bas/cabaneASucre/2.jpg"
+    },
+    {
+        "id": "3",
+        "couleur": "vert",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basCabaneASucre",
+        "image": "img/bas/cabaneASucre/3.jpg"
+    }
+    ],
+  "basSaintValentin": [
+    {
+        "id": "1",
+        "couleur": "blanc",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basSaintValentin",
+        "image": "img/bas/saintValentin/1.jpg"
+    },
+    {
+        "id": "2",
+        "couleur": "rouge",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basSaintValentin",
+      "image": "img/bas/saintValentin/2.jpg"
+    },
+    {
+        "id": "3",
+        "couleur": "vert",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basSaintValentin",
+      "image": "img/bas/saintValentin/3.jpg"
+    }
+    ],
+  "basHalloween": [
+  {
+        "id": "1",
+        "couleur": "blanc",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basHalloween",
+    "image": "img/bas/halloween/1.jpg"
+  },
+  {
+        "id": "2",
+        "couleur": "rouge",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basHalloween",
+    "image": "img/bas/halloween/2.jpg"
+  },
+  {
+        "id": "3",
+        "couleur": "vert",
+        "grandeur": "large",
+        "prixDetail": "4.99",
+        "prixCoutant": "15.00",
+        "categorie": "basHalloween",
+    "image": "img/bas/halloween/3.jpg"
+  }
+]
+
+  }
+

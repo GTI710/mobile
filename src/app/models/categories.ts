@@ -1,4 +1,6 @@
 export class Categories {
-    id: number;
-    categorie: String;
+    idProductCategory: number;
+    name: String;
+    image: String;
+    parentPath: String;
 }

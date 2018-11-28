@@ -1,0 +1,12 @@
+.header {
+  text-align: center
+}
+:root {
+  --primary-color: blue;
+}
+
+button {
+  background: var(--primary-color);
+  width: 100px;
+  lenght: 10px;
+}

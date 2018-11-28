@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Catégories
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <h1 class="header">Bienvenue sur l'application BasDeBonsens</h1>
+  <ion-card *ngFor="let categorie of category" (click)="go(categorie.parentPath)">
+    <img *ngIf="categorie.idProductCategory > 2" src='img/{{categorie.idProductCategory}}.jpg' />
+    <div *ngIf="categorie.idProductCategory > 2" class="card-title">{{categorie.name}}</div>
+  </ion-card>
+</ion-content>
