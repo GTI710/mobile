@@ -14,22 +14,22 @@ export class ProduitsService {
   constructor (private http: HttpClient) { }
 
   getProduitsBasDeNoel(): Observable<any> {
-    return this.http.get<Produits>('http://localhost:8080/api/product/findall/4');
+    return this.http.get<Produits>('http://172.20.10.2:8080/api/product/findall/4');
   }
   getProduitsUniforme(): Observable<any> {
-      return this.http.get<Produits>('http://localhost:8080/api/product/findall/7');
+      return this.http.get<Produits>('http://172.20.10.2:8080/api/product/findall/7');
   }
   getProduitsHalloween(): Observable<any> {
-      return this.http.get<Produits>('http://localhost:8080/api/product/findall/5');
+      return this.http.get<Produits>('http://172.20.10.2:8080/api/product/findall/5');
   }
   getProduitsStValentin(): Observable<any> {
-      return this.http.get<Produits>('http://localhost:8080/api/product/findall/6');
+      return this.http.get<Produits>('http://172.20.10.2:8080/api/product/findall/6');
   }
   getProduitsCabaneASucre(): Observable<any> {
-      return this.http.get<Produits>('http://localhost:8080/api/product/findall/8');
+      return this.http.get<Produits>('http://172.20.10.2:8080/api/product/findall/8');
   }
   getProduitsId(id: Object) {
-    return this.http.get<Produits>('http://localhost:8080/api/product/' + id);
+    return this.http.get<Produits>('http://172.20.10.2:8080/api/product/' + id);
   }
   setProduitsIndividuelId(id: number): void {
       this.idSelection = id;
@@ -38,7 +38,7 @@ export class ProduitsService {
       return this.idSelection;
   }
   postCommentaire(commentaire) {
-      return this.http.post('http://localhost:8080/api/comment', commentaire).subscribe(res => {
+      return this.http.post('http://172.20.10.2:8080/api/comment', commentaire).subscribe(res => {
               console.log(res);
           },
           err => {
@@ -48,7 +48,7 @@ export class ProduitsService {
   }
 
   postCheckOut(checkout) {
-      return this.http.post('http://localhost:8080/api/sale', checkout).subscribe(res => {
+      return this.http.post('http://172.20.10.2:8080/api/sale', checkout).subscribe(res => {
               console.log(res);
           },
           err => {
@@ -58,7 +58,7 @@ export class ProduitsService {
   }
 
   postRating(rating) {
-      return this.http.post('http://localhost:8080/api/rating', rating).subscribe(res => {
+      return this.http.post('http://172.20.10.2:8080/api/rating', rating).subscribe(res => {
               console.log(res);
           },
           err => {
