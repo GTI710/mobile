@@ -19,7 +19,7 @@ export class CheckoutPage implements OnInit {
   checkout(name, address, postalCode, country, ville) {
 
     const checkout = {
-        
+
         'nameClient': name,
         'street': address,
         'city': ville,
